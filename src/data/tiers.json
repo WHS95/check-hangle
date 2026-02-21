@@ -1,0 +1,42 @@
+[
+  {
+    "minScore": 0,
+    "maxScore": 3,
+    "name": "원시인",
+    "description": "이 정도면 사실상 한글을 그림으로 배운 수준이군요! 세종대왕님이 오열할 솜씨입니다. 다시 초등학교 국어책부터 펴는 게 어떨까요? 🙊",
+    "imageUrl": "/images/tier-chimpanzee.png",
+    "topPercent": 99
+  },
+  {
+    "minScore": 4,
+    "maxScore": 6,
+    "name": "외국인",
+    "description": "나랏말싸미 듕귁에 달아... 혹시 한국 생활이 낯설으신가요? 헷갈리는 걸 떠나서 이 정도면 일상생활에서 오해를 살 수도 있겠어요. 🥲",
+    "imageUrl": "/images/tier-0lang.png",
+    "topPercent": 80
+  },
+  {
+    "minScore": 7,
+    "maxScore": 9,
+    "name": "현대인",
+    "description": "가끔 헷갈리지만, 일상 소통에는 큰 무리가 없는 평범한 현대 한국인이군요. 하지만 '돼'와 '되' 같은 함정에는 꽤나 당하시는 편! 🧑‍💼",
+    "imageUrl": "/images/tier-normal.png",
+    "topPercent": 40
+  },
+  {
+    "minScore": 10,
+    "maxScore": 11,
+    "name": "맞춤법 빌런 감별사",
+    "description": "훌륭합니다! 카톡을 할 때 상대방의 맞춤법 실수를 기가 막히게 캐치하고 속으로 불편해하는 성격이시죠? 어디 가서 지적받을 일은 없습니다. 👨‍🏫",
+    "imageUrl": "/images/tier-teacher.png",
+    "topPercent": 10
+  },
+  {
+    "minScore": 12,
+    "maxScore": 12,
+    "name": "환생한 세종대왕",
+    "description": "완벽 그 자체! 맞춤법의 늪에서도 단 하나의 실수도 용납하지 않는 당신은 진정한 우리말 겨루기 달인입니다. 자만하셔도 좋습니다. 👑",
+    "imageUrl": "/images/tier-king.png",
+    "topPercent": 1
+  }
+]
