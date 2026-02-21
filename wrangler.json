@@ -1,0 +1,7 @@
+{
+  "name": "spell-test-viral",
+  "compatibility_date": "2026-02-21",
+  "assets": {
+    "directory": "./dist"
+  }
+}
