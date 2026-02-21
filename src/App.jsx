@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Landing from './components/Landing';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
@@ -7,6 +7,13 @@ import questionsData from './data/questions.json';
 import tiersData from './data/tiers.json';
 
 function App() {
+  // 카카오 SDK 초기화
+  useEffect(() => {
+    if (window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init(import.meta.env.VITE_KAKAO_APP_KEY);
+    }
+  }, []);
+
   const [step, setStep] = useState('landing'); // 'landing', 'quiz', 'result'
   const [score, setScore] = useState(0);
   const [wrongAnswers, setWrongAnswers] = useState([]);
