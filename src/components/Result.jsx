@@ -25,7 +25,7 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
       window.Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: `제 맞춤법 티어는 [${currentTier.name}]입니다! (상위 ${currentTier.topPercent}%)`,
+          title: `[맞춤법고사] 제 맞춤법 티어는 [${currentTier.name}]입니다! (상위 ${currentTier.topPercent}%)`,
           description: `12문제 중 ${score}문제 정답!\n당신의 맞춤법 티어는 무엇인가요?`,
           imageUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop', // 배포 후 변경 필요
           link: {
@@ -35,7 +35,7 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
         },
         buttons: [
           {
-            title: '나도 테스트해보기',
+            title: '나도 시험보기',
             link: {
               mobileWebUrl: window.location.href,
               webUrl: window.location.href,
@@ -109,7 +109,7 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
           onClick={onRestart}
           className="w-full mt-6 py-4 text-gray-400 font-bold hover:text-gray-600 underline underline-offset-4"
         >
-          다시 테스트하기
+          다시 시험보기
         </button>
       </div>
 
@@ -117,7 +117,7 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
       {wrongAnswers.length > 0 && (
         <div className="w-full px-6 mt-6">
           <h3 className="text-xl font-extrabold text-gray-800 mb-5 flex items-center gap-2">
-            📝 오답 노트 <span className="text-sm font-medium text-red-500 bg-red-50 rounded-full px-2 py-0.5">{wrongAnswers.length}개</span>
+            📝 맞춤법고사 오답 노트 <span className="text-sm font-medium text-red-500 bg-red-50 rounded-full px-2 py-0.5">{wrongAnswers.length}문제</span>
           </h3>
           <div className="flex flex-col gap-4">
             {wrongAnswers.map((item, idx) => (
