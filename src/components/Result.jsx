@@ -22,12 +22,18 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
 
   const handleKakaoShare = () => {
     if (window.Kakao && window.Kakao.isInitialized()) {
+      // Build absolute URL for tier-specific image
+      const baseUrl = window.location.origin;
+      const tierImageUrl = currentTier.imageUrl
+        ? `${baseUrl}${currentTier.imageUrl}`
+        : `${baseUrl}/logo-128.png`; // Fallback to logo if imageUrl missing
+
       window.Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
           title: `[맞춤법고사] 제 맞춤법 티어는 [${currentTier.name}]입니다! (상위 ${currentTier.topPercent}%)`,
           description: `12문제 중 ${score}문제 정답!\n당신의 맞춤법 티어는 무엇인가요?`,
-          imageUrl: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop', // 배포 후 변경 필요
+          imageUrl: tierImageUrl,
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
@@ -68,9 +74,9 @@ function Result({ score, wrongAnswers, tiers, onRestart }) {
         </p>
         
         <div className="w-32 h-32 bg-blue-50 rounded-full flex items-center justify-center mb-8 text-6xl shadow-inner border-4 border-white">
-          {currentTier.name === '환생한 세종대왕' ? '👑' : 
+          {currentTier.name === '환생한 세종대왕' ? '👑' :
            currentTier.name === '맞춤법 빌런 감별사' ? '👨‍🏫' :
-           currentTier.name === '현대인' ? '🧑‍💼' :
+           currentTier.name === '한국인' ? '🧑‍💼' :
            currentTier.name === '외국인' ? '🥲' : '🐵'}
         </div>
 

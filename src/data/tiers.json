@@ -18,7 +18,7 @@
   {
     "minScore": 7,
     "maxScore": 9,
-    "name": "현대인",
+    "name": "한국인",
     "description": "가끔 헷갈리지만, 일상 소통에는 큰 무리가 없는 평범한 현대 한국인이군요. 하지만 '돼'와 '되' 같은 함정에는 꽤나 당하시는 편! 🧑‍💼",
     "imageUrl": "/images/tier-normal.png",
     "topPercent": 40
